@@ -49,7 +49,7 @@ String getTargetGeohash(double lat1, double lon1, double radiusMiles) {
   // Normalize longitude to [-180, 180]
   final double lon2Normalized = ((lon2 + 180) % 360) - 180;
 
-  final targetGeohash = geohasher.encode(lat2, lon2Normalized, precision: 6);
+  final targetGeohash = geohasher.encode(lon2Normalized, lat2, precision: 6);
 
   return targetGeohash;
 }
